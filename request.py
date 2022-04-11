@@ -3,7 +3,7 @@ from time import sleep
 import requests
 
 
-for n in range (40, 50):
-    r=requests.get("http://0.0.0.0:8080", headers={"fibo": str(n)})
+for n in range (37, 47):
+    r=requests.get("http://20.121.96.115", headers={"fibo": str(n)})
     print (r.content)
-    #sleep(5)
+    sleep(3)

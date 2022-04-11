@@ -20,11 +20,16 @@ app.get('/', (req, res) => {
   let num = parseInt(req.headers.fibo); 
   console.log(num)
   //fibo(num, num);
-  setTimeout(() => {
-    fibo(num, num);
-  }, 1000);
-  
-  res.send('Processing ' + num);
+  if (num){
+    setTimeout(() => {
+      fibo(num, num);
+    }, 1000);
+    
+    res.send('Processing ' + num);
+  }
+  else {
+    res.send('Hello ');
+  }  
 });
 
 app.listen(PORT, HOST);
